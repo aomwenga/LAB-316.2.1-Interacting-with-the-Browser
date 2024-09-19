@@ -4,19 +4,27 @@
 
 // declared the input
 let guess = prompt(`Pick a number between 1-3`);
+// changes for input
+let tries = 3;
 
 // looping inputs
-if (Number(guess)) {
-  // declared input from guess
-  let input = Number;
-  // if they chose intended winning number
-  if (input == 2) {
-    console.log(`You Win!`);
-    // if the number was wrong
+for (let attempt = 1; attempt <= tries; attempt++) {
+  if (Number(guess)) {
+    // declared input from guess
+    let input = guess;
+    // if they chose intended winning number
+    if (input == 2) {
+      console.log(`You Win!`);
+      // if the number was wrong
+    } else {
+      if (input !== 2) console.log(`OOPS`);
+      prompt(`Try again`);
+    }
+    // if the number was the wrong type of input
   } else {
-    if (input > 2 || input < 2) console.log(`OOPS`);
+    console.log(`You Lose`);
   }
-  // if the number was the wrong type of input
-} else {
-  console.log(`You Lose`);
+  if (attempt == tries) {
+    console.log(`Out of attempts`);
+  }
 }
