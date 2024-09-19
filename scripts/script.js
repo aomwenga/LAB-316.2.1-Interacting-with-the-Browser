@@ -18,7 +18,6 @@ for (let attempt = 1; attempt <= tries; attempt++) {
       // if the number was wrong
     } else {
       if (input !== 2) console.log(`OOPS`);
-      prompt(`Try again`);
     }
     // if the number was the wrong type of input
   } else {
